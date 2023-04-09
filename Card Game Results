@@ -1,0 +1,97 @@
+/*  Friendly Card Game Results:
+During this past winter, a few friends got together every Wednesday night for a friendly game of cards.  On some nights they'd play two games, but never the same game twice on the same night.  The usual players were Energetic Eddie, Mark, William, and Henry.  Sometimes, one of the friends couldn't make it, so there were only three players.  But sometimes they'd call another friend to fill-in.  In every game they played, the one with the hightest score was declared the winner.  These are their results:
+*/
+
+CREATE TABLE card_games(id INTEGER PRIMARY KEY AUTOINCREMENT,
+    date_played TEXT,
+    game_name TEXT,
+    player_name TEXT,
+    score INTEGER);
+    
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/01/05','Rummy','Energetic Eddie',226);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/01/05','Rummy','Mark',418);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/01/05','Rummy','William',523);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/01/05','Rummy','Henry',311);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/01/12','Go Fish','Energetic Eddie',7);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/01/12','Go Fish','Mark',5);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/01/12','Go Fish','William',4);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/01/12','Go Fish','Henry',10);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/01/12','Crazy Eights','Energetic Eddie',215);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/01/12','Crazy Eights','Mark',167);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/01/12','Crazy Eights','William',109);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/01/12','Crazy Eights','Henry',192);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/01/19','Rummy','Energetic Eddie',473);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/01/19','Rummy','Mark',324);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/01/19','Rummy','Henry',516);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/01/26','Crazy Eights','Energetic Eddie',119);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/01/26','Crazy Eights','Mark',212);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/01/26','Crazy Eights','Purple Pete',314);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/01/26','Crazy Eights','Henry',252);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/02','Go Fish','Energetic Eddie',3);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/02','Go Fish','Mark',11);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/02','Go Fish','William',12);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/02','Go Fish','Henry',0);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/02','Pitch','Energetic Eddie',17);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/02','Pitch','Mark',22);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/02','Pitch','William',-3);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/02','Pitch','Henry',9);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/09','Rummy','Amelia',525);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/09','Rummy','Mark',419);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/09','Rummy','William',316);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/09','Rummy','Henry',398);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/16','Crazy Eights','Energetic Eddie',119);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/16','Crazy Eights','Mark',231);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/16','Crazy Eights','William',153);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/16','Crazy Eights','Henry',175);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/23','Pitch','Energetic Eddie',12);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/23','Pitch','Mark',6);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/23','Pitch','William',21);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/23','Go Fish','Energetic Eddie',6);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/23','Go Fish','Mark',7);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/02/23','Go Fish','William',13);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/03/02','Rummy','Energetic Eddie',378);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/03/02','Rummy','Mark',327);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/03/02','Rummy','William',413);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/03/02','Rummy','Henry',517);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/03/09','Pitch','Energetic Eddie',-1);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/03/09','Pitch','Mark',-5);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/03/09','Pitch','William',7);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/03/09','Pitch','Henry',22);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/03/16','Crazy Eights','Energetic Eddie',91);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/03/16','Crazy Eights','Mark',153);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/03/16','Crazy Eights','Amelia',174);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/03/16','Crazy Eights','Mr. Pink',216);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/03/23','Rummy','Energetic Eddie',416);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/03/23','Rummy','Mark',505);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/03/23','Rummy','William',397);
+INSERT INTO card_games(date_played,game_name,player_name,score) VALUES ('2022/03/23','Rummy','Henry',443);
+
+/* Average, max, and min values of scores */
+
+SELECT AVG(score) AS avg_score, MAX(score) AS max_score, MIN(score) as min_score FROM card_games;
+
+/* Average, max, and min scores per game */
+
+SELECT game_name, AVG(score) AS avg_score, MAX(score) AS max_score, MIN(score) AS min_score 
+FROM card_games
+GROUP BY game_name;
+
+/* average, max, and min scores per game, but only for games with an average score above 100 */
+
+SELECT game_name, AVG(score) AS avg_score, MAX(score) AS max_score, MIN(score) AS min_score
+FROM card_games
+GROUP BY game_name
+HAVING avg_score > 100;
+
+/* Grouping data with CASE */
+SELECT game_name,
+    COUNT(*) AS total_games,
+    SUM(CASE WHEN score >= 300 THEN 1 ELSE 0 END) AS high_scores,
+    SUM(CASE WHEN score < 300 THEN 1 ELSE 0 END) AS low_scores
+FROM card_games
+GROUP BY game_name;
+
+/* Filtering data using AND/OR */
+SELECT game_name, player_name, score 
+FROM card_games
+WHERE (score >= 300 AND game_name = 'Rummy') OR (score < 10 AND game_name = 'Go_Fish');
