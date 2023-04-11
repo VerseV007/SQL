@@ -1,0 +1,150 @@
+/*Create the manga_writers table*/
+
+CREATE TABLE manga_writers (
+  writer_id INTEGER PRIMARY KEY,
+  writer_name TEXT
+);
+
+/*Insert data into the manga_writers table*/
+
+INSERT INTO manga_writers (writer_id, writer_name)
+VALUES (1, 'Eiichiro Oda');
+
+INSERT INTO manga_writers (writer_id, writer_name)
+VALUES (2, 'Akira Toriyama');
+
+INSERT INTO manga_writers (writer_id, writer_name)
+VALUES (3, 'Masashi Kishimoto');
+
+INSERT INTO manga_writers (writer_id, writer_name)
+VALUES (4, 'Rumiko Takahashi');
+
+INSERT INTO manga_writers (writer_id, writer_name)
+VALUES (5, 'Naoko Takeuchi');
+
+INSERT INTO manga_writers (writer_id, writer_name)
+VALUES (6, 'Hirohiko Araki');
+
+INSERT INTO manga_writers (writer_id, writer_name)
+VALUES (7, 'Tsugumi Ohba');
+
+INSERT INTO manga_writers (writer_id, writer_name)
+VALUES (8, 'CLAMP');
+
+INSERT INTO manga_writers (writer_id, writer_name)
+VALUES (9, 'Kazuki Takahashi');
+
+INSERT INTO manga_writers (writer_id, writer_name)
+VALUES (10, 'Yoshihiro Togashi');
+
+INSERT INTO manga_writers (writer_id, writer_name)
+VALUES (11, 'Tite Kubo');
+
+INSERT INTO manga_writers (writer_id, writer_name)
+VALUES (12, 'Hiromu Arakawa');
+
+INSERT INTO manga_writers (writer_id, writer_name)
+VALUES (13, 'Kohei Horikoshi');
+
+INSERT INTO manga_writers (writer_id, writer_name)
+VALUES (14, 'Akiko Higashimura');
+
+INSERT INTO manga_writers (writer_id, writer_name)
+VALUES (15, 'Yana Toboso');
+
+/*Create the manga_counts table*/
+
+CREATE TABLE manga_counts (
+  writer_id INTEGER PRIMARY KEY,
+  num_manga INTEGER,
+  most_popular_manga TEXT,
+  FOREIGN KEY(writer_id) REFERENCES manga_writers(writer_id)
+);
+
+/*Insert data into the manga_counts table*/
+
+INSERT INTO manga_counts (writer_id, num_manga, most_popular_manga)
+VALUES (1, 1, 'One Piece');
+
+INSERT INTO manga_counts (writer_id, num_manga, most_popular_manga)
+VALUES (2, 4, 'Dragon Ball');
+
+INSERT INTO manga_counts (writer_id, num_manga, most_popular_manga)
+VALUES (3, 1, 'Naruto');
+
+INSERT INTO manga_counts (writer_id, num_manga, most_popular_manga)
+VALUES (4, 4, 'Inuyasha');
+
+INSERT INTO manga_counts (writer_id, num_manga, most_popular_manga)
+VALUES (5, 2, 'Sailor Moon');
+
+INSERT INTO manga_counts (writer_id, num_manga, most_popular_manga)
+VALUES (6, 8, 'Jojo''s Bizarre Adventure');
+
+INSERT INTO manga_counts (writer_id, num_manga, most_popular_manga)
+VALUES (7, 4, 'Death Note');
+
+INSERT INTO manga_counts (writer_id, num_manga, most_popular_manga)
+VALUES (8, 7, 'Cardcaptor Sakura');
+
+INSERT INTO manga_counts (writer_id, num_manga, most_popular_manga)
+VALUES (9, 1, 'Yu-Gi-Oh!');
+
+INSERT INTO manga_counts (writer_id, num_manga, most_popular_manga)
+VALUES (10, 4, 'Yu Yu Hakusho');
+
+INSERT INTO manga_counts (writer_id, num_manga, most_popular_manga)
+VALUES (11, 1, 'Bleach');
+
+INSERT INTO manga_counts (writer_id, num_manga, most_popular_manga)
+VALUES (12, 1, 'Fullmetal Alchemist');
+
+INSERT INTO manga_counts (writer_id, num_manga, most_popular_manga)
+VALUES (13, 2, 'My Hero Academia');
+
+INSERT INTO manga_counts (writer_id, num_manga, most_popular_manga)
+VALUES (14, 3, 'Princess Jellyfish');
+
+INSERT INTO manga_counts (writer_id, num_manga, most_popular_manga)
+VALUES (15, 3, 'Black Butler');
+
+/*Get a list of all manga writers and the number of manga they have written*/
+
+SELECT writer_name, num_manga
+FROM manga_writers
+JOIN manga_counts
+ON manga_writers.writer_id = manga_counts.writer_id;
+
+/*Get a list of all manga writers and their most popular manga*/
+
+SELECT writer_name, most_popular_manga
+FROM manga_writers
+JOIN manga_counts
+ON manga_writers.writer_id = manga_counts.writer_id;
+
+/*Get a list of all manga writers who have written more than 2 manga*/
+
+SELECT writer_name, num_manga
+FROM manga_writers
+JOIN manga_counts
+ON manga_writers.writer_id = manga_counts.writer_id
+WHERE num_manga > 2;
+
+/*Get a list of all manga writers and the number of manga they have written, sorted in descending order of number of manga*/
+
+SELECT writer_name, num_manga
+FROM manga_writers
+JOIN manga_counts
+ON manga_writers.writer_id = manga_counts.writer_id
+ORDER BY num_manga DESC;
+
+ /*Get a list of all manga writers who have written a manga with the word "hero" in the title, and their most popular manga*/
+ 
+ SELECT writer_name, most_popular_manga
+FROM manga_writers
+JOIN manga_counts
+ON manga_writers.writer_id = manga_counts.writer_id
+WHERE most_popular_manga LIKE '%hero%';
+
+ 
+
